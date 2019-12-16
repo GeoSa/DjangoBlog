@@ -1,0 +1,5 @@
+{% for new in news %}
+    <h2><a href="{% url 'news_detail' pk=new.id %}">{{ new.news_title }}</a></h2>
+    <p>{{ new.news_preview }}</p>
+    <p>{{ new.created_date }}</p>
+{% endfor %}
