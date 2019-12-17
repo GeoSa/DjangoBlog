@@ -15,7 +15,7 @@
 {% block content %}
     <h2>{{ news.news_title }}</h2>
     <p>
-        {{ news.news_text }}
+        {{ news.news_text|safe }}
     </p><hr>
     Категория - {{ news.news_category }}<br>
     Теги: {% for tag in news.news_tag.all %}
